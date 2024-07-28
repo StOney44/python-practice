@@ -41,9 +41,9 @@ class DonchianChannelStrategy:
         win_rate = (returns > 0).mean()
         sharpe_ratio = np.sqrt(252) * returns.mean() / returns.std()
         max_drawdown = (1 - cumulative_returns / (1 + cumulative_returns)).max()
-        beta = # 시장 지수의 변동에 대한 민감성 계산 (예: S&P 500)
-        var = # Value at Risk 계산
-        
+        beta = 1 # 시장 지수의 변동에 대한 민감성 계산 (예: S&P 500)
+        var = 1 # Value at Risk 계산
+
         return {
             "Cumulative Returns": cumulative_returns[-1],
             "Annualized Returns": annualized_returns,
